@@ -9,6 +9,12 @@ module.exports = function( sails ) {
     var requestIdProvider;
     var requestSerializer;
 
+    /**
+     * Attaches a child bunyan request logger to the request.
+     * @param req The request
+     * @param res The response
+     * @param next The next action
+     */
     var attachBunyanRequestLogger = function( req, res, next ) {
 
         try {
@@ -40,7 +46,24 @@ module.exports = function( sails ) {
 
             var config = {};
             config[ configKey ] = {
+
+                /**
+                 * The property name of the request id
+                 */
                 requestIdProperty: 'req_id',
+
+                /**
+                 * Gets or generates a unique id for the request, and attaches it
+                 * to the request logger's options. If no id is returned, then the
+                 * request logger is unmodified.
+                 *
+                 * For example, a heroku style (https://devcenter.heroku.com/articles/http-request-id) provider:
+                 *
+                 * function( req ) {
+                 *   var id = req.headers['x-request-id'] || uuid.v4();
+                 *   return req.id;
+                 * }
+                 */
                 requestIdProvider: generateRequestId
             };
 
@@ -69,6 +92,10 @@ module.exports = function( sails ) {
     };
 };
 
+/**
+ * Generates a uuid v4 request id
+ * @returns {string} Returns the new request id
+ */
 function generateRequestId() {
 
     var buffer = new Buffer( 16 );
