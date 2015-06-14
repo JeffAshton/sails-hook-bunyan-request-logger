@@ -63,6 +63,8 @@ module.exports = function( sails ) {
                  *   var id = req.headers['x-request-id'] || uuid.v4();
                  *   return req.id;
                  * }
+                 *
+                 * The default request id provider returns a UUID v4 (without dashes).
                  */
                 requestIdProvider: generateRequestId
             };
