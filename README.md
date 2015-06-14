@@ -4,7 +4,7 @@ It's installed as a [sails hook] and injected through [sails middleware].
 
 ## Installation
 
-First, install the module.
+First, install the modules.
 
 ```
 $ npm install sails-hook-bunyan
