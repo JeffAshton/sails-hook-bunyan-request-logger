@@ -8,6 +8,18 @@ First, install the module.
 
 ```
 $ npm install sails-hook-bunyan
+$ npm install sails-hook-bunyan-request-logger
+```
+
+Disable the [sails-hook-bunyan] built-in request logger.
+
+```
+// config/log.js
+module.exports.log = {
+
+    /** Handled by sails-hook-bunyan-request-logger */
+    injectRequestLogger: false
+}
 ```
 
 Then, in your project's http config file, inject 'attachBunyanRequestLogger' into your middleware.
