@@ -1,0 +1,34 @@
+{
+  "name": "sails-hook-bunyan-request-logger",
+  "version": "0.0.0",
+  "description": "An extension to sails-hook-bunyan which adds a more customized request logger.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeffAshtonCT/sails-hook-bunyan-request-logger.git"
+  },
+  "keywords": [
+    "sails",
+    "bunyan",
+    "request",
+    "logger"
+  ],
+  "author": "Jeff Ashton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeffAshtonCT/sails-hook-bunyan-request-logger/issues"
+  },
+  "homepage": "https://github.com/JeffAshtonCT/sails-hook-bunyan-request-logger#readme",
+  "dependencies": {
+    "uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "expect": "^1.6.0"
+  },
+  "sails": {
+    "isHook": true
+  }
+}
