@@ -2,6 +2,12 @@
 An extension to [sails-hook-bunyan] which adds a richer request logger.
 It's installed as a [sails hook] and injected through [sails middleware].
 
+This request logger adds customizable request id generation, so that all messages for a particular
+request are uniquely tagged. More information on request ids:
+
+* https://github.com/trentm/node-bunyan#logchild
+* https://devcenter.heroku.com/articles/http-request-id
+
 ## Installation
 
 First, install the modules.
