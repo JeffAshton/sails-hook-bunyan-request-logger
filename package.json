@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-bunyan-request-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An extension to sails-hook-bunyan which adds a richer request logger.",
   "main": "index.js",
   "scripts": {
