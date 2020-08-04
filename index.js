@@ -44,8 +44,8 @@ module.exports = function( sails ) {
 
         defaults: function() {
 
-            var config = {};
-            config[ configKey ] = {
+            var loggerConfig = {};
+            loggerConfig[ configKey ] = {
 
                 /**
                  * The property name of the request id
@@ -69,10 +69,10 @@ module.exports = function( sails ) {
                 requestIdProvider: generateRequestId
             };
 
-            return config;
+            return loggerConfig;
         },
 
-        config: function() {
+        loggerConfig: function() {
 
             sails.config.http.middleware.attachBunyanRequestLogger = attachBunyanRequestLogger;
         },
@@ -81,9 +81,9 @@ module.exports = function( sails ) {
 
             sails.after( 'hook:bunyan:loaded', function() {
 
-                var config = sails.config[ configKey ];
-                requestIdProperty = config.requestIdProperty;
-                requestIdProvider = config.requestIdProvider;
+                var loggerConfig = sails.config[ configKey ];
+                requestIdProperty = loggerConfig.requestIdProperty;
+                requestIdProvider = loggerConfig.requestIdProvider;
 
                 logger = sails.hooks.bunyan.logger;
                 requestSerializer = logger.serializers.req || nullRequestSerializer;

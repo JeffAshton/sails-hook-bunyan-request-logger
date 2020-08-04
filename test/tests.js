@@ -31,7 +31,7 @@ describe( 'sails-hook-bunyan-request-logger', function() {
 
     describe( 'when configured', function() {
 
-        hook.config();
+        hook.loggerConfig();
 
         it( 'sails should have http middleware setup', function() {
             expect( sails.config.http.middleware.attachBunyanRequestLogger ).toBeA( Function );
