@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JeffAshtonCT/sails-hook-bunyan-request-logger.git"
+    "url": "git+https://github.com/markwbrown/sails-hook-bunyan-request-logger.git"
   },
   "keywords": [
     "sails",
@@ -19,9 +19,9 @@
   "author": "Jeff Ashton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JeffAshtonCT/sails-hook-bunyan-request-logger/issues"
+    "url": "https://github.com/markwbrown/sails-hook-bunyan-request-logger/issues"
   },
-  "homepage": "https://github.com/JeffAshtonCT/sails-hook-bunyan-request-logger#readme",
+  "homepage": "https://github.com/markwbrown/sails-hook-bunyan-request-logger#readme",
   "dependencies": {
     "uuid": "^2.0.1"
   },
